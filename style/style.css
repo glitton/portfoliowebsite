@@ -3,7 +3,8 @@
 */
 /*------------------------------------------------------------------
 [Color Codes]
-Dark Blue: #0D7D8C;
+Dark Red: #c12728;
+Light Red: #d82c2e;
 Dark Grey: #363b3f;
 Dark Grey 2: #b6b7b7;
 Social Buttons: #444749;
@@ -36,7 +37,7 @@ body { color: #363b3f; background: #f7f8f8; }
 .section .profilePic { text-align: center; margin: 0 auto; float: none; }
 .section .divider { width: 100px; height: 1px; background: #063940; margin: 0 auto; }
 
-section.colored h1, section.colored h2, section.colored h3, section.colored h4, section.colored p { color: white; }
+section.colored h1, section.colored h2, section.colored h3, section.colored h4, section.colored p { color: #063940; }
 
 .btn, .filter a { font-family: "Lato", sans-serif; font-weight: 400; font-size: 14px; text-decoration: none; background: white; color: #b6b7b7; border: 1px solid #b6b7b7; padding: 18px; -webkit-transition: all 0.3s ease-in, 0s; -moz-transition: all 0.3s ease-in, 0s; -o-transition: all 0.3s ease-in, 0s; -ms-transition: all 0.3s ease-in, 0s; transition: all 0.3s ease-in, 0s; }
 .btn:hover, .filter a:hover, .btn:focus, .filter a:focus { background-color: #0D7D8C; border-color: #0D7D8C; color: white; }
@@ -87,7 +88,7 @@ section .centered { margin: 0 auto; float: none; }
 /*------------------------------------------------------------------
 [3. About]
 -------------------------------------------------------------------*/
-.hero { background: #13B6CC; color: white; }
+.hero { background: #9bc7ca; color: white; }
 .hero .borderBtn, .hero .contactform button, .contactform .hero button { margin-top: 20px; }
 .hero h3 { color: black !important; }
 
@@ -123,10 +124,13 @@ section .centered { margin: 0 auto; float: none; }
 .service:hover .vcamera, .service:focus .vcamera { background-position: -408px bottom; }
 .service:hover .cloud, .service:focus .cloud { background-position: -459px bottom; }
 
+.what-i-do { width: 65%; margin: 0 auto; text-align: center; }
+.what-i-do p { font-size: 16px; }
+
 /*------------------------------------------------------------------
 [4. Skills]
 -------------------------------------------------------------------*/
-section.skills { background: #13B6CC; }
+section.skills { background: #9bc7ca; }
 section.skills h4 { color: black !important; }
 
 .skill { margin: 0 auto 20px auto; float: none; text-align: center; }
@@ -196,7 +200,7 @@ section.portfolio { background: white; }
 /*------------------------------------------------------------------
 [7. Contact]
 -------------------------------------------------------------------*/
-section.contact .details { text-align: center; padding: 0 0 30px 0px; }
+/*section.contact .details { text-align: center; padding: 0 0 30px 0px; }
 section.contact .details p { font-family: "Lato", sans-serif; font-size: 30px; font-weight: 300; }
 section.contact .details p.bigger { font-size: 40px; font-weight: 700; margin-top: 20px; }
 
@@ -210,7 +214,9 @@ section.contact .details p.bigger { font-size: 40px; font-weight: 700; margin-to
 
 .form a { color: white; }
 
-#map { float: left; width: 100%; height: 390px; border-top: 4px solid #0D7D8C; }
+#map { float: left; width: 100%; height: 390px; border-top: 4px solid #0D7D8C; }*/
+
+.contact { text-align: center; }
 
 /*------------------------------------------------------------------
 [8. Footer]
