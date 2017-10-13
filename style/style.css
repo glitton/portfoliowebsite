@@ -84,6 +84,7 @@ section .centered { margin: 0 auto; float: none; }
 .navbar-flat li.active a { background: #0D7D8C;; color: white; }
 .navbar-flat a { font-family: "Lato", sans-serif; font-weight: 700; color: #f7f8f8; -webkit-transition: all 0.3s ease-in, 1s; -moz-transition: all 0.3s ease-in, 1s; -o-transition: all 0.3s ease-in, 1s; -ms-transition: all 0.3s ease-in, 1s; transition: all 0.3s ease-in, 1s; }
 .navbar-flat .navbar-brand { display: none; }
+.gl-logo { width: 54px; height: 54px; }  
 
 /*------------------------------------------------------------------
 [3. About]
@@ -124,7 +125,7 @@ section .centered { margin: 0 auto; float: none; }
 .service:hover .vcamera, .service:focus .vcamera { background-position: -408px bottom; }
 .service:hover .cloud, .service:focus .cloud { background-position: -459px bottom; }
 
-.what-i-do { width: 65%; margin: 0 auto; text-align: center; }
+.what-i-do { width: 60%; margin: 0 auto; text-align: center; }
 .what-i-do p { font-size: 16px; }
 
 /*------------------------------------------------------------------
