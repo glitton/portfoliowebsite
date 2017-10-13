@@ -84,7 +84,7 @@ section .centered { margin: 0 auto; float: none; }
 .navbar-flat li.active a { background: #0D7D8C;; color: white; }
 .navbar-flat a { font-family: "Lato", sans-serif; font-weight: 700; color: #f7f8f8; -webkit-transition: all 0.3s ease-in, 1s; -moz-transition: all 0.3s ease-in, 1s; -o-transition: all 0.3s ease-in, 1s; -ms-transition: all 0.3s ease-in, 1s; transition: all 0.3s ease-in, 1s; }
 .navbar-flat .navbar-brand { display: none; }
-.gl-logo { width: 54px; height: 54px; }  
+img.gl-logo { width: 40px; height: 25px; margin: 0; padding: 0;} 
 
 /*------------------------------------------------------------------
 [3. About]
@@ -221,6 +221,8 @@ section.contact .details p.bigger { font-size: 40px; font-weight: 700; margin-to
 
 section.contact { text-align: center; }
 section.contact h3 {margin-top: 0px;}
+#logo-contact {margin-bottom: 24px;}
+section.contact h3 a.email {color: #0D7D8C; text-decoration: none;}
 
 /*------------------------------------------------------------------
 [8. Footer]
@@ -253,7 +255,7 @@ footer .tumblr:hover { background-color: #4d7Da1; }
 footer .linkedin { background: url(../images/linkedin.png) center no-repeat #444749; }
 footer .linkedin:hover { background-color: #0073b2; }
 
-img { max-width: 100%; height: auto; }
+img { max-width: 100%; height: auto; margin-bottom: 22px; }
 
 .clear { clear: both; }
 
