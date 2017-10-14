@@ -137,8 +137,7 @@ $(document).ready(function(){
     });  
 
     // Stops PAWS Finder YouTube video when modal window is closed
-    $('.close-paws').on('click', function(e){
-    	e.preventDefault();
+    $('.close-paws').on('click', function(){
         var video = $('.paws').attr('src');
           $('.paws').attr('src','');
           $('.paws').attr('src', video);
