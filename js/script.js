@@ -62,7 +62,7 @@ $(document).ready(function(){
 	});
 
 	// Portfolio modal
-	$('.fullwidth').boxer();
+	// $('.fullwidth').boxer();
 
 	// Animations
 	var windowH = $(window).height();
@@ -114,33 +114,6 @@ $(document).ready(function(){
 		}
 	});
 
-	// Google Maps
-	function init() {
-		var mapOptions = {
-			zoom: 14,
-			center: new google.maps.LatLng(41.045802,28.994427),
-			styles: [{featureType:"landscape",stylers:[{saturation:-100},{lightness:65},{visibility:"on"}]},{featureType:"poi",stylers:[{saturation:-100},{lightness:51},{visibility:"simplified"}]},{featureType:"road.highway",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"road.arterial",stylers:[{saturation:-100},{lightness:30},{visibility:"on"}]},{featureType:"road.local",stylers:[{saturation:-100},{lightness:40},{visibility:"on"}]},{featureType:"transit",stylers:[{saturation:-100},{visibility:"simplified"}]},{featureType:"administrative.province",stylers:[{visibility:"off"}]/**/},{featureType:"administrative.locality",stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",stylers:[{visibility:"on"}]/**/},{featureType:"water",elementType:"labels",stylers:[{visibility:"on"},{lightness:-25},{saturation:-100}]},{featureType:"water",elementType:"geometry",stylers:[{hue:"#ffff00"},{lightness:-25},{saturation:-97}]}]
-		};
-		var mapElement = document.getElementById('map');
-		var map = new google.maps.Map(mapElement, mapOptions);
-		var contentString = "One Responsive Flat Theme";
-		var infowindow = new google.maps.InfoWindow({
-			content: contentString
-		});
-
-		var image = 'images/marker.png';
-		var marker = new google.maps.Marker({
-			position: mapOptions.center,
-			map: map,
-			icon: image
-		});
-
-		google.maps.event.addListener(marker, 'click', function() {
-			infowindow.open(map,marker);
-		});
-	}
-
-	google.maps.event.addDomListener(window, 'load', init);
 
 	if(!Modernizr.input.placeholder){
 		$('[placeholder]').each(function(){
@@ -156,37 +129,19 @@ $(document).ready(function(){
 		});
 	}
 
-	// Form Validation
-	$.validate({
-		form:'.contactform',
-		borderColorOnError : '#c12728',
-		scrollToTopOnError : false,
-		validateOnBlur : false,
-		onError:function() {
-			//alert('Validation failed');
-		},
-		onSuccess:function(){
-			$('.sendcontact').prop("disabled",true);
-			$('p.error').html('Your message sent.');
-			var name		= $("form[name=contactform] input[name='send[name]']").val(),
-				email		= $("form[name=contactform] input[name='send[email]']").val(),
-				message		= $("form[name=contactform] textarea[name='send[message]']").val();
 
-			$.ajax({
-				url: '/send.php',
-				type: 'POST',
-				data: {type: 'contact', name : name, email : email, message : message},
-				dataType: 'json',
-				success: function(data)
-				{
-					$('.sendcontact').prop("disabled",true);
-					$('p.error').html('Your message sent.');
-				},
-				error: function(){
-					$("#xhr").removeClass('xhr');
-				}
-			});
-		}
-	});
+	   // Modals   
+    $('.launch-modal').on('click', function(e){
+        e.preventDefault();
+        $( '#' + $(this).data('modal-id')).modal();
+    });  
+
+    // Stops PAWS Finder YouTube video when modal window is closed
+    $('.close-paws').on('click', function(){
+        var video = $('.paws').attr('src');
+          $('.paws').attr('src','');
+          $('.paws').attr('src', video);
+        }
+      )
 
 });
