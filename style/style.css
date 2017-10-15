@@ -126,7 +126,7 @@ img.gl-logo { width: 40px; height: 25px; margin: 0; padding: 0;}
 .service:hover .vcamera, .service:focus .vcamera { background-position: -408px bottom; }
 .service:hover .cloud, .service:focus .cloud { background-position: -459px bottom; }
 
-.what-i-do { width: 54%; margin: 0 auto; text-align: center; line-height: 24px;}
+.what-i-do { width: 57%; margin: 0 auto; text-align: center; line-height: 24px;}
 .what-i-do p { font-size: 16px; }
 
 /*------------------------------------------------------------------
