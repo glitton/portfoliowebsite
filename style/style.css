@@ -310,3 +310,7 @@ input, textarea { -webkit-appearance: none; }
   .timeline .timestamp, .timeline .bubble { float: left; }
   .timeline .bubble, .timeline .odd .bubble { margin: 0px 0 0 30px; width: 80%; padding: 22px 30px 25px 32px; }
   .timeline .bubble-arrow { background-position: right top; left: -10px; right: auto; } }
+
+  @media only screen and (min-device-width : 300px) and (max-device-width : 800px) {
+    .slides-navigation .prev { display: none; }
+    .slides-navigation .next { display: none; } }
