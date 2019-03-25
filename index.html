@@ -81,9 +81,12 @@
             heap[p[c]] = o(p[c]);
         });
       heap.load("240601335");
-      document.getElementById("about").onclick = function() {
+      });
+    </script>
+    <script type="text/javascript">
+      document.getElementById("about").addEventListener("click", function() {
         heap.track("clickAbout", { logo: "glcodeworks" });
-      };
+        console.log("heap track invoked");
     </script>
 
     <!-- Favicon -->
@@ -442,12 +445,6 @@
                       title="See code"
                     ></i>
                   </a>
-                  <!-- Modal link -->
-                  <!--
-                    <a href="#paws" class="launch-modal fullwidth" data-modal-id="paws-modal" title="See app video">
-                    	<i class="fa fa-video-camera" aria-hidden="true" ></i>
-                    </a>
-                  -->
                   <!-- Heroku app link -->
                   <a
                     href="https://pawsfinder.herokuapp.com/"
@@ -872,17 +869,6 @@
           <div class="modal-body">
             <div class="modal-video">
               <div class="embed-responsive embed-responsive-16by9">
-                <!--
-                  <iframe
-                    class="paws"
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/WtttVfNOYvg"
-                    frameborder="0"
-                    allowfullscreen
-                  >
-                  </iframe>
-                -->
                 <!-- Heap video tracker -->
                 <div id="player"></div>
                 <!-- prettier-ignore-start -->
