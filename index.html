@@ -41,49 +41,49 @@
     <script src="js/modernizr-2.6.2.min.js" type="text/javascript"></script>
     <!-- Heap Script -->
     <script type="text/javascript">
-      ;(window.heap = window.heap || []),
+      (window.heap = window.heap || []),
         (heap.load = function(e, t) {
-          ;(window.heap.appid = e), (window.heap.config = t = t || {})
-          var r = t.forceSSL || 'https:' === document.location.protocol,
-            a = document.createElement('script')
-          ;(a.type = 'text/javascript'),
+          (window.heap.appid = e), (window.heap.config = t = t || {});
+          var r = t.forceSSL || "https:" === document.location.protocol,
+            a = document.createElement("script");
+          (a.type = "text/javascript"),
             (a.async = !0),
             (a.src =
-              (r ? 'https:' : 'http:') +
-              '//cdn.heapanalytics.com/js/heap-' +
+              (r ? "https:" : "http:") +
+              "//cdn.heapanalytics.com/js/heap-" +
               e +
-              '.js')
-          var n = document.getElementsByTagName('script')[0]
-          n.parentNode.insertBefore(a, n)
+              ".js");
+          var n = document.getElementsByTagName("script")[0];
+          n.parentNode.insertBefore(a, n);
           for (
             var o = function(e) {
                 return function() {
                   heap.push(
                     [e].concat(Array.prototype.slice.call(arguments, 0))
-                  )
-                }
+                  );
+                };
               },
               p = [
-                'addEventProperties',
-                'addUserProperties',
-                'clearEventProperties',
-                'identify',
-                'resetIdentity',
-                'removeEventProperty',
-                'setEventProperties',
-                'track',
-                'unsetEventProperty'
+                "addEventProperties",
+                "addUserProperties",
+                "clearEventProperties",
+                "identify",
+                "resetIdentity",
+                "removeEventProperty",
+                "setEventProperties",
+                "track",
+                "unsetEventProperty"
               ],
               c = 0;
             c < p.length;
             c++
           )
-            heap[p[c]] = o(p[c])
-        })
-      heap.load('240601335')
-      document.getElementById('about').onclick = function() {
-        heap.track('clickAbout', { logo: 'glcodeworks' })
-      }
+            heap[p[c]] = o(p[c]);
+        });
+      heap.load("240601335");
+      document.getElementById("about").onclick = function() {
+        heap.track("clickAbout", { logo: "glcodeworks" });
+      };
     </script>
 
     <!-- Favicon -->
@@ -107,7 +107,7 @@
       <style>
         .timeline li {
           display: block;
-          -ms-filter: 'progid: DXImageTransform.Microsoft.Alpha(Opacity=100)';
+          -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
           filter: alpha(opacity=100);
           opacity: 1;
         }
@@ -872,15 +872,54 @@
           <div class="modal-body">
             <div class="modal-video">
               <div class="embed-responsive embed-responsive-16by9">
-                <iframe
-                  class="paws"
-                  width="560"
-                  height="315"
-                  src="https://www.youtube.com/embed/WtttVfNOYvg"
-                  frameborder="0"
-                  allowfullscreen
-                >
-                </iframe>
+                <!--
+                  <iframe
+                    class="paws"
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/WtttVfNOYvg"
+                    frameborder="0"
+                    allowfullscreen
+                  >
+                  </iframe>
+                -->
+                <!-- Heap video tracker -->
+                <div id="player"></div>
+                <!-- prettier-ignore-start -->
+                <script type="text/javascript">
+                  var tag = document.createElement("script");
+                  tag.src = "https://www.youtube.com/iframe_api";
+                  var firstScriptTag = document.getElementsByTagName(
+                    "script"
+                  )[0];
+                  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                  var player;
+                  function onYouTubeIframeAPIReady() {
+                    player = new YT.Player("player", {
+                      width: "560",
+                      height: "315",
+                      videoId: "WtttVfNOYvg", //replace VIDEO_ID with the videoId from Youtube
+                      events: {
+                        onPlayerReady: onPlayerReady,
+                        onStateChange: onPlayerStateChange
+                      }
+                    });
+                  }
+                  <!--prettier-ignore-end -->
+                  function onPlayerReady(event) {
+                    console.log("player ready");
+                  }
+
+                  function onPlayerStateChange(newState) {
+                    if (newState.data == 1) {
+                      heap.track("Video Playing");
+                    } else if (newState.data == 0) {
+                      heap.track("Video Finished");
+                    } else if (newState.data == 2) {
+                      heap.track("Video Paused");
+                    }
+                  }
+                </script>
               </div>
               <div class="modal-footer">
                 <button
