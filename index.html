@@ -83,20 +83,8 @@
         });
       heap.load("240601335");
     </script>
-    <script type="text/javascript">
-      function clickAbout() {
-        document
-          .getElementById("whatIDo")
-          .addEventListener("click", function() {
-            heap.track("clickAbout", { about: "What I Do" });
-            console.log("heap track API invoked for About");
-          });
-      }
-    </script>
-
     <!-- Favicon -->
     <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
-
     <!-- Styles -->
     <link href="style/reset.css" rel="stylesheet" type="text/css" />
     <link
@@ -176,15 +164,7 @@
                   ><img class="gl-logo" src="images/logo-white.png"
                 /></a>
               </li>
-              <li>
-                <a
-                  href="#about"
-                  class="scrollto"
-                  id="whatIDo"
-                  onclick="clickAbout()"
-                  >ABOUT</a
-                >
-              </li>
+              <li><a href="#about" class="scrollto" id="whatIDo">ABOUT</a></li>
               <li><a href="#skills" class="scrollto">SKILLS</a></li>
               <li><a href="#experience" class="scrollto">EXPERIENCE</a></li>
               <li><a href="#portfolio" class="scrollto">PORTFOLIO</a></li>

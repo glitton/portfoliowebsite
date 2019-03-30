@@ -136,4 +136,10 @@ $(document).ready(function() {
     $(".paws").attr("src", "");
     $(".paws").attr("src", video);
   });
-});
+
+  // Heap Track API
+  document.getElementById("whatIDo").addEventListener("click", function() {
+    heap.track("clickAbout", { about: "What I Do" });
+    console.log("heap track API invoked for About");
+  });
+}); // end of document ready
