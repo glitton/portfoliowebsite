@@ -39,50 +39,6 @@
     <!-- Scripts -->
     <script src="js/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script src="js/modernizr-2.6.2.min.js" type="text/javascript"></script>
-    //
-    <!-- Heap Script -->
-    <script type="text/javascript">
-      (window.heap = window.heap || []),
-        (heap.load = function(e, t) {
-          (window.heap.appid = e), (window.heap.config = t = t || {});
-          var r = t.forceSSL || "https:" === document.location.protocol,
-            a = document.createElement("script");
-          (a.type = "text/javascript"),
-            (a.async = !0),
-            (a.src =
-              (r ? "https:" : "http:") +
-              "//cdn.heapanalytics.com/js/heap-" +
-              e +
-              ".js");
-          var n = document.getElementsByTagName("script")[0];
-          n.parentNode.insertBefore(a, n);
-          for (
-            var o = function(e) {
-                return function() {
-                  heap.push(
-                    [e].concat(Array.prototype.slice.call(arguments, 0))
-                  );
-                };
-              },
-              p = [
-                "addEventProperties",
-                "addUserProperties",
-                "clearEventProperties",
-                "identify",
-                "resetIdentity",
-                "removeEventProperty",
-                "setEventProperties",
-                "track",
-                "unsetEventProperty"
-              ],
-              c = 0;
-            c < p.length;
-            c++
-          )
-            heap[p[c]] = o(p[c]);
-        });
-      heap.load("240601335");
-    </script>
     <!-- Favicon -->
     <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
     <!-- Styles -->
@@ -157,7 +113,7 @@
         <div class="navbar-collapse collapse">
           <nav>
             <ul class="nav navbar-nav">
-              <li class=" scrollto codeworks"><</li>
+              <li class="scrollto codeworks"><</li>
               <!-- Nav Menu -->
               <li class="active">
                 <a href="#welcome" class="scrollto"
@@ -222,8 +178,8 @@
             scratch. By 2017, I followed my passion and trained to be a
             full-time web developer. <br />
             As an enterprise solutions engineer, I am using my technical skills
-            along with my business acumen to create solutions that achieve my customers'
-            desired outcomes.
+            along with my business acumen to create solutions that achieve my
+            customers' desired outcomes.
           </p>
         </div>
         <div class="services-inner hidethis"></div>
@@ -880,8 +836,8 @@
                       videoId: "WtttVfNOYvg", //replace VIDEO_ID with the videoId from Youtube
                       events: {
                         onPlayerReady: onPlayerReady,
-                        onStateChange: onPlayerStateChange
-                      }
+                        onStateChange: onPlayerStateChange,
+                      },
                     });
                   }
                   <!--prettier-ignore-end -->
