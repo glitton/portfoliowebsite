@@ -145,14 +145,6 @@
         <div class="heading">
           <h1>GENEROSA LITTON</h1>
           <h3>Solutions Engineer &bull; Bass Player &bull; Scuba Diver</h3>
-          <!--
-            <a
-              href="https://drive.google.com/file/d/0BycDuBITg7ZsbGtWNE5LNWR2a1E/view?usp=sharing"
-              target="_blank"
-              class="borderBtn"
-              >DOWNLOAD RESUME</a
-            >
-          -->
         </div>
       </div>
     </section>
@@ -839,20 +831,6 @@
                         onStateChange: onPlayerStateChange,
                       },
                     });
-                  }
-                  <!--prettier-ignore-end -->
-                  function onPlayerReady(event) {
-                    console.log("player ready");
-                  }
-
-                  function onPlayerStateChange(newState) {
-                    if (newState.data == 1) {
-                      heap.track("Video Playing");
-                    } else if (newState.data == 0) {
-                      heap.track("Video Finished");
-                    } else if (newState.data == 2) {
-                      heap.track("Video Paused");
-                    }
                   }
                 </script>
               </div>
