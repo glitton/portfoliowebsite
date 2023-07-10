@@ -1,2 +1,2 @@
-rm -r blog
+rm -r blog*
 mv public blog
